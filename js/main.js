@@ -91,7 +91,7 @@ const spaceTexture = new THREE.TextureLoader().load('img/planet/space.jpg');
 scene.background = spaceTexture;
 
 //avatar
-const myTexture = new THREE.TextureLoader().load('img/planet/fox.jpg');
+const myTexture = new THREE.TextureLoader().load('img/planet/my.jpg');
 
 const my = new THREE.Mesh(
 	new THREE.BoxGeometry(3, 3, 3),
