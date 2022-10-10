@@ -242,27 +242,26 @@ const ambienTLight = new THREE.AmbientLight(0x9A3F5C);
 scene.add(ssLight, ambienTLight);
 
 
-
-
-
-
-
-
-
 function moveCamera() {
 	const t = document.body.getBoundingClientRect().top;
-	myEarht.rotation.x += 0.05;
-	myEarht.rotation.y += 0.075;
-	myEarht.rotation.z += 0.05;
+	// myEarht.rotation.x += 0.05;
+	// myEarht.rotation.y += 0.075;
+	// myEarht.rotation.z += 0.05;
 
-	myMars.rotation.x += 0.05;
-	myMars.rotation.y += 0.075;
-	myMars.rotation.z += 0.05;
+	// myMars.rotation.x += 0.05;
+	// myMars.rotation.y += 0.075;
+	// myMars.rotation.z += 0.05;
 
+	// myJupiter.rotation.x += 0.05;
+	// myJupiter.rotation.y += 0.075;
+	// myJupiter.rotation.z += 0.05;
 
+	torus.rotation.x += 0.03;
+	torus.rotation.y += 0.03;
+	torus.rotation.z += 0.03;
 
-	my.rotation.y += 0.01;
-	my.rotation.z += 0.01;
+	my.rotation.y += 0.013;
+	my.rotation.z += 0.013;
 
 	camera.position.z = t * -0.013;
 	camera.position.x = t * -0.0002;
