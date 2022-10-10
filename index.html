@@ -10,86 +10,131 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="css/style.css">
 
+	<link href='https://fonts.googleapis.com/css?family=Ropa+Sans' rel='stylesheet' type='text/css' />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
 	<meta itemprop="name" content="share title">
 	<meta name="description" itemprop="description" content="share content">
+	<script src="js/shuffle-tex.js"></script>
 </head1>
 
 <title>3D Portfolio - Three.js</title>
 </head>
 
-<body class="main">
+<body class="main ">
 	<canvas id="bg"></canvas>
 	<div id="circles">
 		<div id="circle1">
 			<img class="rot" src=" http://cdn.onlinewebfonts.com/svg/download_450017.png" alt="">
 		</div>
 	</div>
+
 	<main>
 		<header>
-			<h1>N!kolay Nedelko</h1>
-			<h2>Automatization & Visualization</h2>
-			<h3>🚀 Welcome to my website!</h3>
-			<h4>Specializations:<br>
-				ᅠ ᅠ— System Engineer <br>
-				ᅠ ᅠ— Analyst<br>
-				ᅠ ᅠ— Developer<br>
-				ᅠ ᅠ— Tester</h4>
+			<canvas id="myCanvas" width="465" height="200"></canvas>
+			<h1 class=" code">N!kolay Nedelko</h1>
+			<h2 class="code">Automatization & Visualization</h2>
+			<h3 class="code">🚀 Welcome to my website!</h3>
+			<h4 class="code">Specializations:</h4>
+			<ul>
+				<li class="code">— System Engineer</li>
+				<li class="code">— Developer</li>
+				<li class="code">— Analyst</li>
+				<li class="code">— Tester</li>
+			</ul>
+			<script>
+				window.addEventListener('load', init);
 
-			<canvas id="diamond" style="position: absolute; 
-			 z-index: 10;"></canvas>
+				function init() {
+					var effectList = [];
+					var elementList = document.querySelectorAll('.code');
+					for (var i = 0; i < elementList.length; i++) {
+						var element = elementList[i];
+
+						element.dataset.index = i;
+						effectList[i] = new ShuffleText(element);
+						element.addEventListener('mouseenter', function () {
+							effectList[+this.dataset.index].start();
+						});
+						element.addEventListener('mouseleave', function () {
+							effectList[+this.dataset.index].start();
+						});
+
+						effectList[i].start();
+					}
+				}
+			</script>
+			<!-- <canvas id="diamond" style="position: absolute; 
+			 z-index: 10;left: auto;"></canvas> -->
 		</header>
 		<blockquote>
-			<p>Remember that there is usually a solution that is simpler and faster than what comes to your mind first.
+			<p class="code">Remember that there is usually a solution that is simpler and faster than what comes to your
+				mind first.
 				<br>
 				-Donald Knuth
 			</p>
 		</blockquote>
 		<section class="here">
-			<h2>📜 Немного о себе</h2>
-			<p>
+			<h2 class="code">📜 Немного о себе</h2>
+			<p class="code">
 				Меня зовут Николай. Интересуюсь разработкой web сайтов, web приложений, 3D-моделированием,
-				3D-визуализацией также увлекся автоматизацией рутинных отчетов на Python и визуализацией больших данных в инструменте <a style="color: white;"  href="https://www.tableau.com/">Tableau</a>.
-				<p>	Для меня программирование/разработка это не просто трудовой процесс, но ещё творчество и увлечение. </p>
-				<p>Способность и стремление к самообразованию и усовершенствованию профессиональных навыков, способность анализировать и стремление всегда доводить поставленные задачи до совершенства с нестандартным подходом для достижения уникального результата.</p>
-				<h4 style="color: rgb(206, 151, 168);" >По собственной инициативе для удобства работы могу разработать инструкцию для проекта/отчета </h4>
+				3D-визуализацией также увлекся автоматизацией рутинных отчетов на Python и визуализацией больших данных в
+				инструменте <a style="color: white;" href="https://www.tableau.com/">Tableau</a>.
+				<p class="code"> Для меня программирование/разработка это не просто трудовой процесс, но ещё творчество и
+					увлечение. </p>
+				<p class="code">Способность и стремление к самообразованию и усовершенствованию профессиональных навыков,
+					способность
+					анализировать и стремление всегда доводить поставленные задачи до совершенства с нестандартным подходом
+					для достижения уникального результата.</p>
+				<h4 class="code" style="color: rgb(206, 151, 168);">По собственной инициативе для удобства работы могу
+					разработать инструкцию для проекта/отчета </h4>
 				В свободное время люблю <br>
 				ᅠ ᅠ1. Читать разные статьи по IT <br>
-				ᅠ ᅠ2. Смотреть видео по <a style="color: white;"  href="https://zen.yandex.ru/media/sharaut/vorkaut--chto-eto-takoe-chem-polezen-i-pochemu-tak-populiaren-60b8665a17777f062075f0f2">Street Workout</a> пробую изучать новые трюки (но пока тренирую базу) <br>
+				ᅠ ᅠ2. Смотреть видео по <a style="color: white;"
+					href="https://zen.yandex.ru/media/sharaut/vorkaut--chto-eto-takoe-chem-polezen-i-pochemu-tak-populiaren-60b8665a17777f062075f0f2">Street
+					Workout</a> пробую изучать новые трюки (но пока тренирую базу) <br>
 				ᅠ ᅠ3. Изучать новую информацию по языкам и не только<br>
-				ᅠ ᅠ4. Смотреть анонсы аниме/фильмам =)<br></p>
+				ᅠ ᅠ4. Смотреть анонсы аниме/фильмам =)<br>
+			</p>
 			</p>
 			<div class="wrapper">
 				<ul class="social">
 					<li><a href="https://github.com/Mental-Fox"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-					<li><a href="https://www.instagram.com/n_n_nikolay/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+					<li><a href="https://www.instagram.com/n_n_nikolay/"><i class="fa fa-instagram"
+								aria-hidden="true"></i></a></li>
 				</ul>
 			</div>
 		</section>
 		<div class="right">
 			<blockquote>
-				<p>The main problem of programmers is that it is impossible to predict their mistakes. <br>-Seymour Cray
+				<p class="code">The main problem of programmers is that it is impossible to predict their mistakes.
+					<br>-Seymour Cray
 				</p>
 			</blockquote>
 		</div>
 		<section class="light">
-			<h2>🌏 Works that are in GitHub</h2>
+			<h2 class="code">🌏 Works that are in GitHub</h2>
 			<p>
-				Мало работ которых я выкладываю в git так как я делаю скрипты для компаниии 
+				Мало работ которых я выкладываю в git так как я делаю скрипты для компаниии
 			</p>
 			<div class="flex">
 				<div class="container">
-					<a href="https://github.com/Mental-Fox/graduation_project_2021"><p>Project-2021</p></a>
+					<a href="https://github.com/Mental-Fox/graduation_project_2021">
+						<p>Project-2021</p>
+					</a>
 				</div>
 				<div class="container">
-					<a href="https://github.com/Mental-Fox/File-is-less-1KB"><p>File-is-less-1KB</p></a>
+					<a href="https://github.com/Mental-Fox/File-is-less-1KB">
+						<p>File-is-less-1KB</p>
+					</a>
 				</div>
 				<div class="container">
-					<a href="https://github.com/Mental-Fox/Planets-3D-card"><p>Planets-3D-card</p></a>
+					<a href="https://github.com/Mental-Fox/Planets-3D-card">
+						<p>Planets-3D-card</p>
+					</a>
 				</div>
 			</div>
-			<h2>👩🏽‍🚀 Blender</h2>
+			<h2 class="code">👩🏽‍🚀 Blender</h2>
 			<p>
 				Проектов пока что тут нет - в основе я учился в университете - там были некоторые проекты по blender
 			</p>
@@ -107,31 +152,34 @@
 					<img class="project" src="img/model/1untitled.png" alt="">
 				</div>
 			</div>
-			<h2> Применение стека технологий/Цифровые навыки:</h2>
+			<h2 class="code"> Применение стека технологий/Цифровые навыки:</h2>
 			<ul class="list6b">
-				<li>Python, VBA Excel, Tableau, MySQL, PHP, SSH, Linux, Git, HTML5, CSS3 </li>
-				<li>Язык Python (Начальный-Средний): работаю с датафреймами в отчетах и использую MySQL для загрузки в базу </li>
+				<li class="code">Python, VBA Excel, Tableau, MySQL, PHP, SSH, Linux, Git, HTML5, CSS3 </li>
+				<li class="code">Язык Python (Начальный-Средний): работаю с датафреймами в отчетах и использую MySQL для
+					загрузки в базу </li>
 			</ul>
-			<h2>Другое:</h2>
-				<li>Blender 3D, Webgl, Three.js</li>
-				<li>Работа в команде, Обучение персонала, Деловое общение, Деловая коммуникация</li>
-				<li>Web библиотеки: <a class="WebLib" href="https://threejs.org/">three.js</a>,
-					<a class="WebLib" href="https://vincentgarreau.com/particles.js/">particles.js</a>,
-					<a class="WebLib" href="https://gijsroge.github.io/tilt.js/">tilt.js</a>,
-					<a class="WebLib" href="https://vitejs.dev/">Vite.js</a></li>
-				<li>Сборщики и менеджеры пакетов: Vite.js, NPM, NPX </li>
-				<li>Фреймворки: React(мало изучал)</li>
+			<h2 class="code">Другое:</h2>
+			<li class="code">Blender 3D, Webgl, Three.js</li>
+			<li class="code">Работа в команде, Обучение персонала, Деловое общение, Деловая коммуникация</li>
+			<li class="code">Web библиотеки: <a class="WebLib" href="https://threejs.org/">three.js</a>,
+				<a class="WebLib" href="https://vincentgarreau.com/particles.js/">particles.js</a>,
+				<a class="WebLib" href="https://gijsroge.github.io/tilt.js/">tilt.js</a>,
+				<a class="WebLib" href="https://vitejs.dev/">Vite.js</a></li>
+			<li class="code">Сборщики и менеджеры пакетов: Vite.js, NPM, NPX </li>
+			<li class="code">Фреймворки: React(мало изучал)</li>
 		</section>
 		<div class="right">
 			<blockquote>
-				<p>The main problem of programmers is that it is impossible to predict their mistakes. <br>-Seymour Cray
+				<p class="code">The main problem of programmers is that it is impossible to predict their mistakes.
+					<br>-Seymour Cray
 				</p>
 			</blockquote>
 		</div>
 		<section class="left">
-			<h2>💻 Work History</h2>
-			<h3>Дипломный проект от колледжа 2018</h3>
-			<p class="blockquote">Июнь 2018 Тема: "Разработка и сопровождение корпоративного web-портала для предприятия"</p>
+			<h2 class="code">💻 Work History</h2>
+			<h3 class="code">Дипломный проект от колледжа 2018</h3>
+			<p class="blockquote">Июнь 2018 Тема: "Разработка и сопровождение корпоративного web-портала для предприятия"
+			</p>
 			<a style="color: white;" href="http://incatalog.kz">
 				<div class="container">
 					<img class="project" src="/img/work/2018.png" alt="">
@@ -142,8 +190,9 @@
 				<a style="color: white;" href="http://incatalog.kz">http://incatalog.kz</a>
 			</p>
 			<hr>
-			<h3>Дипломный проект от университета 2021</h3>
-			<p class="blockquote">Май 2021 Тема:"Разработка информационного сайта с использованием 3D-моделирования с использованием библиотеки Three.js"<br>
+			<h3 class="code">Дипломный проект от университета 2021</h3>
+			<p class="blockquote">Май 2021 Тема:"Разработка информационного сайта с использованием 3D-моделирования с
+				использованием библиотеки Three.js"<br>
 				Были сложности с 3D-визуализацией планет </p>
 			<a style="color: white;" href="https://in-space.netlify.app">
 				<div class="container">
@@ -159,13 +208,24 @@
 		</section>
 		<div class="right">
 			<blockquote>
-				<p>The main problem of programmers is that it is impossible to predict their mistakes. <br>-Seymour Cray
+				<p class="code">The main problem of programmers is that it is impossible to predict their mistakes.
+					<br>-Seymour Cray
 				</p>
 			</blockquote>
 		</div>
+		<section class="here">
+			<h2 class="code">📄 Курсы 💻</h2>
+			<p class="code">
+				<p>Июнь 2021 - Academy ElectroNeek - Разработка RPA процессов (python)</p>
+				<p>Март 2022 - Academy BITLAB - Разработка на PHP (HTML, CSS, JS, PHP)</p>
+				<p>Октябрь 2022 - Tele2 - Продвинутый курс по Python</p>
+			</p>
+		</section>
+		
+
 		<blockquote class="footer">
 			<footer>
-				<p>Thanks for watching! <br>
+				<p class="code">Thanks for watching! </br>
 					<span>© 2021 «N_N»</span>
 				</p>
 			</footer>
@@ -174,108 +234,113 @@
 	<script type="module" src="js/main.js"></script>
 	<script type="module" src="js/cursor.js"></script>
 	<!-- Three.js library -->
-<script src="https://threejs.org/build/three.min.js"></script>
-<!-- GLTFLoader.js source -->
-<script src="https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/loaders/GLTFLoader.js"></script>
+	<script src="https://threejs.org/build/three.min.js"></script>
+	<!-- GLTFLoader.js source -->
+	<script src="https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/loaders/GLTFLoader.js"></script>
 	<script>
-		 const renderer = new THREE.WebGLRenderer({
+		const renderer = new THREE.WebGLRenderer({
 			canvas: document.getElementById('diamond'),
-			alpha:true, 
-			antialias:true
-		 });
-    const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1000);
-    const scene = new THREE.Scene();
-    let Mesh;
-    let light;
-    function init() {
-		camera.position.set(0, 10, 19);
-		renderer.setSize(window.innerWidth, window.innerHeight);
-        document.body.appendChild(renderer.domElement);
-    }
-    function setLight() {
+			alpha: true,
+			antialias: true
+		});
+		const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1000);
+		const scene = new THREE.Scene();
+		let Mesh;
+		let light;
+
+		function init() {
+			camera.position.set(0, 10, 19);
+			renderer.setSize(window.innerWidth, window.innerHeight);
+			document.body.appendChild(renderer.domElement);
+		}
+
+		function setLight() {
 			const pointLight = new THREE.PointLight(0x674EA7, 1);
-			pointLight.position.set( 50, 50, 50 );
-			var rectLight = new THREE.RectAreaLight( 0xfff00f, undefined,  2, 10 );
+			pointLight.position.set(50, 50, 50);
+			var rectLight = new THREE.RectAreaLight(0xfff00f, undefined, 2, 10);
 			rectLight.intensity = 70.0;
-			rectLight.position.set( 5, 5, 0 );
-			var spotLight = new THREE.SpotLight( 0xfff00f,0.8 );
-			spotLight.position.set( 100, 1000, 100 );
+			rectLight.position.set(5, 5, 0);
+			var spotLight = new THREE.SpotLight(0xfff00f, 0.8);
+			spotLight.position.set(100, 1000, 100);
 			spotLight.castShadow = true;
 			spotLight.shadow.mapSize.width = 1024;
 			spotLight.shadow.mapSize.height = 1024;
 			spotLight.shadow.camera.near = 500;
 			spotLight.shadow.camera.far = 4000;
 			spotLight.shadow.camera.fov = 30;
-			var directionalLight = new THREE.DirectionalLight( 0x674EA7, 0.5 );
-			directionalLight.position.set( 0, 1, 0 );
-			scene.add( pointLight, directionalLight,rectLight, spotLight);
-    }
+			var directionalLight = new THREE.DirectionalLight(0x674EA7, 0.5);
+			directionalLight.position.set(0, 1, 0);
+			scene.add(pointLight, directionalLight, rectLight, spotLight);
+		}
 
-	//     // prepare stats
-	//	  stats = new Stats();
-   // stats.domElement.style.position = 'absolute';
-   // stats.domElement.style.left     = '10px';
-   // stats.domElement.style.bottom   = '10px';
-   // stats.domElement.style.zIndex   = 1;
-   // document.getElementById("#diamond").appendChild( stats.domElement );
+		//     // prepare stats
+		//	  stats = new Stats();
+		// stats.domElement.style.position = 'absolute';
+		// stats.domElement.style.left     = '10px';
+		// stats.domElement.style.bottom   = '10px';
+		// stats.domElement.style.zIndex   = 1;
+		// document.getElementById("#diamond").appendChild( stats.domElement );
 
-   // function loadGLTF() {
-   //     let Loader = new THREE.GLTFLoader();
-   //     Loader.load('/img/model/diamond.glb', (gltf) => {	
-	//			Mesh = gltf.scene;
-	//			Mesh.scale.set(0.1,0.1,0.1);
-   //         scene.add(Mesh);
-	//			Mesh.position.x = -0.3;
-   //         Mesh.position.y = 10.4;
-   //         Mesh.position.z = 14;
+		// function loadGLTF() {
+		//     let Loader = new THREE.GLTFLoader();
+		//     Loader.load('/img/model/diamond.glb', (gltf) => {	
+		//			Mesh = gltf.scene;
+		//			Mesh.scale.set(0.1,0.1,0.1);
+		//         scene.add(Mesh);
+		//			Mesh.position.x = -0.3;
+		//         Mesh.position.y = 10.4;
+		//         Mesh.position.z = 14;
 
-   //     });
-   // }
-	 function loadGLTF() {
-		var loader = new THREE.GLTFLoader();
-		loader.load('/img/model/diamond.glb', (gltf) => {
-		var material2 = new THREE.MeshLambertMaterial({ color: 0x54112D,});
-			material2.metalness = 0.1;
-			material2.roughness = 0.1;
-			material2.color = new THREE.Color(0x9A3F5C);
-			object = gltf.scene;
-			object.scale.set(0.1,0.1,0.1);
-			object.castShadow = true;
-			object.receiveShadow = true;
-			object.traverse((node) => {
-			if (!node.isMesh) return;
-			node.material = material2;
-			node.material.depthTest = true;
-			node.material.opacity = 0.9;
-			node.material.transparent = true;
-			node.material.shininess = 150.00; 
-			node.material.linewidth = 2; 
-				//node.material.wireframe = true; 
+		//     });
+		// }
+		function loadGLTF() {
+			var loader = new THREE.GLTFLoader();
+			loader.load('/img/model/diamond.glb', (gltf) => {
+				var material2 = new THREE.MeshLambertMaterial({
+					color: 0x54112D,
+				});
+				material2.metalness = 0.1;
+				material2.roughness = 0.1;
+				material2.color = new THREE.Color(0x9A3F5C);
+				object = gltf.scene;
+				object.scale.set(0.1, 0.1, 0.1);
+				object.castShadow = true;
+				object.receiveShadow = true;
+				object.traverse((node) => {
+					if (!node.isMesh) return;
+					node.material = material2;
+					node.material.depthTest = true;
+					node.material.opacity = 0.9;
+					node.material.transparent = true;
+					node.material.shininess = 150.00;
+					node.material.linewidth = 2;
+					//node.material.wireframe = true; 
+				});
+				scene.add(object);
+				object.position.x = -0.6;
+				object.position.y = 10.4;
+				object.position.z = 15.;
 			});
-			scene.add(object);
-			object.position.x = -0.6;
-			object.position.y = 10.4;
-			object.position.z = 15.;
-		});
-				
-    }
-    function animate() {
-        requestAnimationFrame(animate);
-        if (object && object.rotation) {
-        
-			object.rotation.x -= 0.01;
-			object.rotation.z -= 0.01;
-        }
-        renderer.render(scene, camera);
-    }
-    init();
-    setLight();
-    loadGLTF();
-    animate();
+
+		}
+
+		function animate() {
+			requestAnimationFrame(animate);
+			if (object && object.rotation) {
+
+				object.rotation.x -= 0.01;
+				object.rotation.z -= 0.01;
+			}
+			renderer.render(scene, camera);
+		}
+		init();
+		setLight();
+		loadGLTF();
+		animate();
 	</script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"
 		integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous">
-		</script>
+	</script>
 	<script>
 		SmoothScroll({
 			// Время скролла 400 = 0.4 секунды
@@ -284,7 +349,7 @@
 			stepSize: 100,
 			// Дополнительные настройки:
 			// Ускорение 
-			accelerationDelta:60,
+			accelerationDelta: 60,
 			// Максимальное ускорение
 			accelerationMax: 2,
 			// Поддержка клавиатуры
@@ -301,4 +366,5 @@
 		});
 	</script>
 </body>
+
 </html>
