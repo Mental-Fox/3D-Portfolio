@@ -1,6 +1,6 @@
 @import url("https://use.typekit.net/jmk3xov.css");
 @import url("https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css");
-
+@import url("https://db.onlinewebfonts.com/c/c545a36000d0fe5eb6dd44b3cabda9cf?family=Posterama");
 
 
 *::-webkit-scrollbar,
@@ -26,7 +26,7 @@ html *::-webkit-scrollbar-thumb {
 :root {
 	--dark-bg: rgba(16, 15, 15, 0.866);
 	--spacing: 350px;
-	font-family: brandon-grotesque, sans-serif;
+	font-family: Posterama, sans-serif;
 	font-weight: 400;
 	font-style: normal;
 	font-size: 1.5rem;
@@ -44,7 +44,6 @@ main {
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	z-index: 10;
-		
 }
 
 
@@ -52,7 +51,7 @@ h1,
 h2,
 h3,
 blockquote {
-	font-family: elevon, sans-serif;
+
 	font-weight: 700;
 	font-style: normal;
 
@@ -72,10 +71,16 @@ canvas {
 
 .code {
 	list-style-type: none;
+
+}
+
+* {
+	font-family: Posterama, sans-serif;
 }
 
 .b_course {
-	color: rgb(187, 10, 75);
+	color: #bb0a4b;
+
 }
 
 header {
