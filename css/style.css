@@ -54,35 +54,30 @@ blockquote {
 
 	font-weight: 700;
 	font-style: normal;
-
 }
-
 canvas {
 	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: -100;
-
 }
-
 #diamond {
 	z-index: 10;
 }
 
 .code {
 	list-style-type: none;
-
 }
 
 * {
-	font-family: Posterama, sans-serif;
+	font-family: 'Posterama',Arial,sans-serif;
+	font-weight: 300;
+	/* font-size: 20px; */
 }
 
 .b_course {
 	color: #bb0a4b;
-
 }
-
 header {
 	background: var(--dark-bg);
 	grid-column: 2/span 5;
@@ -92,7 +87,6 @@ header {
 	border: 1px rgb(43, 39, 39) solid;
 	border-radius: 30px;
 }
-
 
 section {
 	grid-column: 2/10;
@@ -117,7 +111,6 @@ blockquote p {
 	background-color: #fff;
 	font-style: 4rem;
 	display: inline;
-
 	line-height: 1;
 }
 
